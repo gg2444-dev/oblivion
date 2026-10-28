@@ -1,0 +1,8 @@
+# My first Oblivion program
+let name = "Alex"
+let age = 16
+let result = 10 + 5 * 2
+print("Hello, " + name)
+print("Your age:", age)
+print("Calculation:", result)
+print("Are you a teenager?", age >= 13 and age <= 19)

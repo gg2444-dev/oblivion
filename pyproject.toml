@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "oblivion-lang"
+version = "0.2.0"
+description = "Oblivion: linguagem de programação moderna e simples com interpretador educacional"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "Contribuidores do projeto Oblivion" }]
+keywords = ["linguagem-de-programacao", "interpretador", "educacional"]
+# O interpretador não tem dependências externas (zero deps).
+dependencies = []
+
+[project.scripts]
+oblivion = "oblivion.__main__:main"
+
+[tool.setuptools]
+# Layout plano: o pacote fica na raiz para que
+# `python -m oblivion` funcione sem instalação.
+packages = ["oblivion"]

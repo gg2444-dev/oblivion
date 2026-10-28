@@ -1,0 +1,16 @@
+# Laços e contagem — demonstra while, if/else e atribuição.
+let contador = 1
+let soma = 0
+
+while contador <= 10 {
+    soma = soma + contador
+    contador = contador + 1
+}
+
+print("Soma de 1 a 10:", soma)
+
+if soma > 50 {
+    print("A soma passou de 50!")
+} else {
+    print("A soma ficou abaixo de 50.")
+}

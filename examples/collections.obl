@@ -1,0 +1,44 @@
+# Listas, mapas e laços — coleções e controle de fluxo (milestone 1, v0.2)
+
+let jogadores = ["Alex", "Lucas", "Ryan"]
+push(jogadores, "Maria")
+
+print("Jogadores:", jogadores, "total:", len(jogadores))
+print("Primeiro:", jogadores[0], "| Ultimo:", jogadores[-1])
+
+for nome in jogadores {
+    if nome == "Lucas" {
+        continue
+    }
+    print("Welcome, " + nome + "!")
+}
+
+let perfil = {
+    nome: "Oblivion",
+    versao: "0.2"
+}
+
+perfil.versao = "0.3"
+perfil["autor"] = "voce"
+
+print(perfil)
+print("nome:", perfil.nome, "| faltando:", perfil.naoExiste)
+
+for chave in perfil {
+    print(" -", chave, "=", perfil[chave])
+}
+
+let numeros = []
+let i = 1
+while i <= 5 {
+    if i == 3 {
+        i = i + 1
+        continue
+    }
+    if i > 4 {
+        break
+    }
+    push(numeros, i * i)
+    i = i + 1
+}
+print("Quadrados:", numeros)
