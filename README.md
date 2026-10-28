@@ -81,44 +81,63 @@ oblivion/
 
 ## 3. Como rodar (sem instalação)
 
-Abra o terminal **na raiz do projeto** (a pasta que contém `pyproject.toml`).
+Você pode executar a Oblivion diretamente do código-fonte, sem instalar dependências externas.
+
+Abra um terminal na raiz do projeto, na pasta que contém o arquivo `pyproject.toml`.
 
 ### Windows — PowerShell
 
+**Executar um programa**
+
 ```powershell
-cd C:\Users\pietr\Documents\oblivion
+python -m oblivion examples/hello.obl
+```
 
-# executar um programa
-python -m oblivion examples\hello.obl
+**Ajuda e versão**
 
-# ajuda e versão
+```powershell
 python -m oblivion --help
 python -m oblivion --version
+```
 
-# testes
+**Executar os testes**
+
+```powershell
 python -m unittest
 ```
 
-### macOS / Linux — bash
+### macOS / Linux
+
+**Executar um programa**
 
 ```bash
-cd ~/Documents/oblivion
-
 python3 -m oblivion examples/hello.obl
+```
+
+**Ajuda e versão**
+
+```bash
 python3 -m oblivion --help
 python3 -m oblivion --version
+```
+
+**Executar os testes**
+
+```bash
 python3 -m unittest
 ```
 
 ### REPL interativo
 
-Sem argumentos, o interpretador entra em modo interativo:
+Para iniciar o modo interativo, execute:
 
 ```bash
 python -m oblivion
 ```
 
-```
+Exemplo:
+
+```text
 Oblivion 0.2.0 — REPL interativo. Digite :help para ajuda.
 obl> let x = 41
 obl> print(x + 1)
@@ -126,19 +145,24 @@ obl> print(x + 1)
 obl> :sair
 ```
 
-No REPL: `:help` mostra ajuda, `:sair` (ou `:exit`, `:q`) encerra. As variáveis
-persistem entre comandos e blocos `{ ... }` podem ocupar várias linhas.
+No REPL, `:help` mostra a ajuda e `:sair`, `:exit` ou `:q` encerra a sessão.
 
 ### Instalação opcional
 
+Para instalar a Oblivion em modo editável e disponibilizar o comando global, execute na raiz do projeto:
+
 ```bash
 python -m pip install -e .
-oblivion examples/hello.obl   # comando global (mesma CLI)
 ```
 
-Obs.: o comando `oblivion` só funciona se a pasta `Scripts` (Windows) ou `bin`
-(macOS/Linux) do Python estiver no `PATH`. Você pode verificar a instalação com
-`oblivion --version`.
+Depois, você poderá executar:
+
+```bash
+oblivion examples/hello.obl
+oblivion --version
+```
+
+O comando global depende de a pasta de executáveis do Python estar disponível no `PATH`.
 
 ## 4. Primeiro programa
 
